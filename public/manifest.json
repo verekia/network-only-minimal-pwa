@@ -1,6 +1,6 @@
 {
-  "short_name": "Minimal SW",
-  "name": "Minimal Service Worker",
+  "short_name": "Minimal PWA",
+  "name": "Network-First Minimal PWA",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f16529",
