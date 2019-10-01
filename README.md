@@ -2,7 +2,7 @@
 
 **The user experience of PWAs is great**. Every time I open a full-screen PWA from the home screen of my phone (and now desktop!), I'm delighted. "Ahhhh, that's niiiice". But you know what's not nice? The **fucking awful developer experience**. Every time I have to deal with this I want to throw my laptop out the window.
 
-It feels like nothing works. You never know if the files that are rendered are up-to-date, you never know if the service worker being used is up-to-date, you never know if Chrome DevTool is being buggy, since it often doesn't reflect the actual content of the cache (or cookies) without having to click refresh, and worst of all, even after you click 50 times on _Update, Unregister, Stop, DELETE EVERYTHING, BYPASS EVERYTHING, CLEAR SITE DATA, CLOSE TAB, CLOSE ALL BROWSER WINDOWS, REINSTALL CHROME, FUCK YOU SERVICE WORKER_, it still shows you some old shit. Un-fucking-bearable.
+It feels like nothing works. You never know if the files that are rendered are up-to-date, you never know if the service worker being used is up-to-date, you never know if Chrome DevTool is being buggy, since it often doesn't reflect the actual content of the cache without having to click refresh, and worst of all, even after you click 50 times on _Update, Unregister, Stop, DELETE EVERYTHING, BYPASS EVERYTHING, CLEAR SITE DATA, CLOSE TAB, CLOSE ALL BROWSER WINDOWS, REINSTALL CHROME, FUCK YOU SERVICE WORKER_, it still shows you some old shit. Un-fucking-bearable.
 
 I just want my users to be able to install my web app and open it without a URL bar, how hard should that be?
 
