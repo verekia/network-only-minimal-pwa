@@ -69,7 +69,7 @@ self.addEventListener('install', () => self.skipWaiting())
 ```json
 {
   "short_name": "Minimal PWA",
-  "name": "Network-First Minimal PWA",
+  "name": "Network-Only Minimal PWA",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f16529",
