@@ -1,5 +1,5 @@
 {
-  "name": "minimal-sw",
+  "name": "network-first-minimal-pwa",
   "routes": [
     { "src": "/contact", "dest": "/contact.html" },
     { "src": "/about", "dest": "/about.html" }
