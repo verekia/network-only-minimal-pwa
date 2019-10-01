@@ -12,7 +12,7 @@ So there you go, here is my setup for a headache-free Network-Only Minimal PWA. 
 
 ## Files
 
-**sw.js**:
+**sw.js**
 ```js
 const offlineHtml = `
 <!DOCTYPE html>
@@ -40,7 +40,7 @@ self.addEventListener('fetch', event =>
 self.addEventListener('install', () => self.skipWaiting())
 ```
 
-**HTML files**:
+**HTML files**
 ```html
 <!DOCTYPE html>
 <html>
@@ -65,7 +65,7 @@ self.addEventListener('install', () => self.skipWaiting())
 </html>
 ```
 
-**manifest.json**:
+**manifest.json**
 ```json
 {
   "short_name": "Minimal PWA",
