@@ -1,5 +1,5 @@
 {
-  "name": "network-first-minimal-pwa",
+  "name": "network-only-minimal-pwa",
   "routes": [
     { "src": "/contact", "dest": "/contact.html" },
     { "src": "/about", "dest": "/about.html" }
