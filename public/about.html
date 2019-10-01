@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#f16529" />
+  </head>
+  <body>
+    <p>About</p>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js')
+      }
+    </script>
+  </body>
+</html>

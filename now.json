@@ -1,0 +1,7 @@
+{
+  "name": "minimal-sw",
+  "routes": [
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/about", "dest": "/about.html" }
+  ]
+}
