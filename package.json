@@ -1,9 +1,8 @@
 {
   "scripts": {
-    "start": "serve public",
-    "build": "echo nothing to build but required to deploy on Zeit Now"
+    "start": "serve public"
   },
   "devDependencies": {
-    "serve": "11.2.0"
+    "serve": "11.3.0"
   }
 }

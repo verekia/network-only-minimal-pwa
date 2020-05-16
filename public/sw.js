@@ -28,12 +28,25 @@ const offlineHtml = `
 </html>
 `
 
-self.addEventListener('fetch', event =>
+self.addEventListener('fetch', (event) =>
   event.respondWith(
-    self.navigator.onLine
-      ? fetch(event.request)
-      : new Response(offlineHtml, { headers: { 'Content-Type': 'text/html' } })
+    self.navigator.onLine === false
+      ? new Response(offlineHtml, { headers: { 'Content-Type': 'text/html' } })
+      : fetch(event.request)
   )
 )
 
 self.addEventListener('install', () => self.skipWaiting())
+
+// https://github.com/NekR/self-destroying-sw
+
+self.addEventListener('activate', () => {
+  setTimeout(() => {
+    self.registration
+      .unregister()
+      .then(() => self.clients.matchAll())
+      .then((clients) => {
+        clients.forEach((client) => client.navigate(client.url))
+      })
+  }, 5000)
+})
