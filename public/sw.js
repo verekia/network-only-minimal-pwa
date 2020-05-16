@@ -4,6 +4,7 @@ const offlineHtml = `
   <head>
     <title>Offline</title>
     <meta name="theme-color" content="#f16529" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       body { background: #f0f0f0 }
       h1 {
