@@ -19,8 +19,25 @@ const offlineHtml = `
 <html>
   <head>
     <title>Offline</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#f16529" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-      /* some styles */
+      body { background: #f0f0f0 }
+      h1 {
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: #333;
+        margin-top: 100px;
+        padding: 20px;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+        border-bottom: 2px solid #333;
+        font-weight: initial;
+        padding-bottom: 3px;
+      }
     </style>
   </head>
   <body>
@@ -29,13 +46,11 @@ const offlineHtml = `
 </html>
 `
 
-self.addEventListener('fetch', event =>
-  event.respondWith(
-    self.navigator.onLine
-      ? fetch(event.request)
-      : new Response(offlineHtml, { headers: { 'Content-Type': 'text/html' } })
-  )
-)
+self.addEventListener('fetch', event => {
+  if (self.navigator.onLine === false) {
+    event.respondWith(new Response(offlineHtml, { headers: { 'Content-Type': 'text/html' } }))
+  }
+})
 
 self.addEventListener('install', () => self.skipWaiting())
 ```
@@ -48,6 +63,7 @@ self.addEventListener('install', () => self.skipWaiting())
     <title></title>
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#f16529" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <p>Home</p>
@@ -56,6 +72,7 @@ self.addEventListener('install', () => self.skipWaiting())
       <li><a href="/contact">Contact</a></li>
       <li><a href="/about">About</a></li>
     </ul>
+    <img src="/img/icon-512.png" width="100" />
     <script>
       if (navigator.serviceWorker) {
         navigator.serviceWorker.register('/sw.js')

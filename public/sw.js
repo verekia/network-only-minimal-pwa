@@ -3,6 +3,7 @@ const offlineHtml = `
 <html>
   <head>
     <title>Offline</title>
+    <meta charset="UTF-8">
     <meta name="theme-color" content="#f16529" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -29,13 +30,11 @@ const offlineHtml = `
 </html>
 `
 
-self.addEventListener('fetch', (event) =>
-  event.respondWith(
-    self.navigator.onLine === false
-      ? new Response(offlineHtml, { headers: { 'Content-Type': 'text/html' } })
-      : fetch(event.request)
-  )
-)
+self.addEventListener('fetch', event => {
+  if (self.navigator.onLine === false) {
+    event.respondWith(new Response(offlineHtml, { headers: { 'Content-Type': 'text/html' } }))
+  }
+})
 
 self.addEventListener('install', () => self.skipWaiting())
 
