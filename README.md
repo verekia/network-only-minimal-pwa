@@ -8,7 +8,7 @@ I just want my users to be able to install my web app and open it without a URL 
 
 **SO**, from now on, I won't try to do any smart fine-tuning of my files, and will only return some offline HTML fallback in order to pass the requirements for the home screen install. And let's also `skipWaiting` while we're at it, to update the Service Worker as soon as possible.
 
-So there you go, here is my setup for a headache-free Network-Only Minimal PWA. You can [try it online and offline here](https://network-only-minimal-pwa.verekia.now.sh).
+So there you go, here is my setup for a headache-free Network-Only Minimal PWA.
 
 ## Files
 
